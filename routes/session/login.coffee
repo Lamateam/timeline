@@ -5,7 +5,8 @@ exports.init = (app)->
         if err 
           res.send {"!err": err}
         else
-          req.session.user = user
-          res.sendStatus 200
+          token = req.sessionID
+          app.get('connector').sessions().create {user_id: user.id, token: token}, (err, session)->
+            res.send if err then {"!err": err} else {"token": token}
     else
       res.send {"!err": "005"}
