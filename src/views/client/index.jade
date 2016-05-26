@@ -1,0 +1,126 @@
+extends ./layout.jade
+script(type="text/javascript")
+  | window.isLogged = true;
+block content
+  
+  include includes/header_login.jade
+
+  .main
+    .background
+    .container.wow.fadeInUp(data-wow-offset="10",data-wow-iteration="1")
+      h2.text-center=language.upload.header
+
+        div(id="upload")
+          div(id="drop")=language.upload.form
+            <br>
+            a.btn.btn-primary=language.upload.browse
+            form(id="upload_form", type="multipart/form-data")
+              input(type="file", name="document", id="upload_button", multiple="multiple")  
+          ul(id="file_container")
+
+          button.btn.btn-primary.text-center.submit-files-btn=language.upload.deal 
+
+
+
+
+    .container.wow.fadeInUp(data-wow-offset="10",data-wow-iteration="1")
+
+      h2.text-center=language.result.header
+
+        table.text-center.table-condensed.table.table-responsive
+          tr
+            th=language.result.file
+            td Тест 4
+          tr
+            th=language.result.name
+            td Какой-то фаил
+          tr
+            th=language.result.date
+            td 12.12.2014
+          tr
+            th=language.result.number
+            td 213324
+          tr
+            th=language.result.judge
+            td Кадыров Р.А.
+          tr
+            th=language.result.decision
+            td.result
+             table
+                tr
+                  th 1
+                  td sdfdsfaafsad
+                tr
+                  th 2
+                  td dfsfasdfsda
+          tr
+            th=language.result.active
+            td Отказать
+
+        table.text-center.table-condensed.table.table-responsive
+          tr
+            th=language.result.file
+            td Тест 4
+          tr
+            th=language.result.name
+            td Какой-то фаил
+          tr
+            th=language.result.date
+            td 12.12.2014
+          tr
+            th=language.result.number
+            td 213324
+          tr
+            th=language.result.judge
+            td Кадыров Р.А.
+          tr
+            th=language.result.decision
+            td.result
+             table
+                tr
+                  th 1
+                  td sdfdsfaafsad
+                tr
+                  th 2
+                  td dfsfasdfsda
+          tr
+            th=language.result.active
+            td Отказать
+
+
+        table.text-center.table-condensed.table.table-responsive
+          tr
+            th=language.result.file
+            td Тест 4
+          tr
+            th=language.result.name
+            td Какой-то фаил
+          tr
+            th=language.result.date
+            td 12.12.2014
+          tr
+            th=language.result.number
+            td 213324
+          tr
+            th=language.result.judge
+            td Кадыров Р.А.
+          tr
+            th=language.result.decision
+            td.result
+             table
+                tr
+                  th 1
+                  td sdfdsfaafsad
+                tr
+                  th 2
+                  td dfsfasdfsda
+          tr
+            th=language.result.active
+            td Отказать    
+ 
+        
+
+      button.btn.btn-default.pull-left.upload_back=language.result.back
+      button.btn.btn-primary.pull-right.upload_result=language.result.send
+
+    include includes/footer.jade

@@ -1,0 +1,32 @@
+{
+  "port": 3000,
+  "languages": ["russian", "english"],
+  "jade": {
+    "encoding": "utf-8",
+    "styles": ["/static/style.css"],
+    "client_scripts": ["/static/client.js"],
+    "admin_scripts": ["/static/admin.js"]
+  },
+  "session": {
+    "secret": "fpjfpwklef[wefkw['"
+  },
+  "connector": {
+    "dialect": "mysql",
+    "connection": {
+      "host": "localhost",
+      "user": "root",
+      "password": "as210100",
+      "database": "timeline"
+    }
+  },
+  "parser": {
+    "https": {
+      "url": "https://ru.wikipedia.org/",
+      "path": "wiki/"
+    }
+  },
+  "user": {
+    "login": "admin",
+    "password": "admin"
+  }
+}
